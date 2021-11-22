@@ -9,7 +9,7 @@ config = {
 }
 
 json_object = json.dumps(config, indent = 4)
-name = "config_" + str(uuid.uuid4()) + ".json"
+name = "config_" + str(uuid.uuid1()) + ".json"
 with open(name, "w") as outfile:
     outfile.write(json_object)
 print(name + " successfully created.")
