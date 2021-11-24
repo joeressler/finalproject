@@ -8,7 +8,7 @@ def config_creator(filename):
 
 
 
-config1 = config_creator('config_c011f526-4ba3-11ec-9198-a4bb6d6e7ab9.json')
+config1 = config_creator('config_d1513d4a-4d76-11ec-ae24-a4bb6d6e7ab9.json')
 print(config1)
-d1 = Drop(config1)
+d1 = Game(config1)
 d1
