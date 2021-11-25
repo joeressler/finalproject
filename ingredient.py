@@ -8,12 +8,12 @@ class Ingredient:
         self.level = level
 
     def __repr__(self):
-        return "%s %f" % (self.name, self.weighting)
+        return "\nName: %s, Probability: %0.2f%%" % (self.name, (self.prob * 100))
     
     def Drop(self):
         self.quantity += 1
     
     def isAdded(self):
-        """code that says if the level is finished
+        """code that returns True if the ingredient has been added at least once 
         """
         return self.quantity > 0

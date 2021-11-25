@@ -5,15 +5,15 @@
         "ingredients": [
             {
                 "name": "Ingredient 1",
-                "probability": 0.3
+                "weighting": 4
             },
             {
                 "name": "Ingredient 2",
-                "probability": 0.3
+                "weighting": 4
             },
             {
                 "name": "Ingredient 3",
-                "probability": 0.2
+                "weighting": 3
             }
         ]
     },
@@ -23,15 +23,15 @@
         "ingredients": [
             {
                 "name": "Ingredient 4",
-                "probability": 0.2
+                "weighting": 3
             },
             {
                 "name": "Ingredient 5",
-                "probability": 0.2
+                "weighting": 3
             },
             {
                 "name": "Ingredient 6",
-                "probability": 0.1
+                "weighting": 2
             }
         ]
     },
@@ -41,15 +41,15 @@
         "ingredients": [
             {
                 "name": "Ingredient 7",
-                "probability": 0.2
+                "weighting": 2
             },
             {
                 "name": "Ingredient 8",
-                "probability": 0.2
+                "weighting": 2
             },
             {
                 "name": "Ingredient 9",
-                "probability": 0.1
+                "weighting": 1
             }
         ]
     }

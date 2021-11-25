@@ -1,5 +1,5 @@
 import json
-from Drop_Class import *
+from game import *
 
 def config_creator(filename):
     with open(filename, 'r') as openfile:
@@ -8,7 +8,8 @@ def config_creator(filename):
 
 
 
-config1 = config_creator('config_d1513d4a-4d76-11ec-ae24-a4bb6d6e7ab9.json')
-print(config1)
+config1 = config_creator(
+    'config_2c311168-4d95-11ec-b5cc-a4bb6d6e7ab9.json'
+    )
 d1 = Game(config1)
 d1

@@ -1,8 +1,9 @@
 import json
 import uuid
-rare = 1
-uncommon = 2
-common = 3
+epic = 1
+rare = 2
+uncommon = 3
+common = 4
 
 config = [
     {
@@ -29,9 +30,9 @@ config = [
         "level" : 3,
         "reward" : 30,
         "ingredients" : [
-            {"name" : "Ingredient 7", "weighting" : uncommon},
-            {"name" : "Ingredient 8", "weighting" : uncommon},
-            {"name" : "Ingredient 9", "weighting" : rare},
+            {"name" : "Ingredient 7", "weighting" : rare},
+            {"name" : "Ingredient 8", "weighting" : rare},
+            {"name" : "Ingredient 9", "weighting" : epic},
                          ]
         
     }
