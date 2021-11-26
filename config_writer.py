@@ -12,7 +12,7 @@ config = [
         "ingredients" : [
             {"name" : "Ingredient 1", "weighting" : common},
             {"name" : "Ingredient 2", "weighting" : common},
-            {"name" : "Ingredient 3", "weighting" : uncommon},
+             {"name" : "Ingredient 3", "weighting" : uncommon},
                          ]
         
     },
@@ -26,16 +26,16 @@ config = [
                          ]
         
     },
-    {
-        "level" : 3,
-        "reward" : 30,
-        "ingredients" : [
-            {"name" : "Ingredient 7", "weighting" : rare},
-            {"name" : "Ingredient 8", "weighting" : rare},
-            {"name" : "Ingredient 9", "weighting" : epic},
-                         ]
+      {
+         "level" : 3,
+         "reward" : 30,
+         "ingredients" : [
+             {"name" : "Ingredient 7", "weighting" : rare},
+             {"name" : "Ingredient 8", "weighting" : rare},
+             {"name" : "Ingredient 9", "weighting" : epic},
+                          ]
         
-    }
+     }
     
 ]
 

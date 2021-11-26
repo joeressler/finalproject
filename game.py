@@ -1,6 +1,6 @@
 from ingredient import *
 from level import *
-from random import random
+import random
 
 class Game:
     def __init__(self, config):
@@ -15,20 +15,20 @@ class Game:
         self.tokenswon = 0
         self.totaldrops = 0
         gameweight = sum(map(lambda x: x.levelweight, self.levels))
-        cumulativeprob = 0
+        self.cumulativeprob = 0
         for level in self.levels:
             for ing in level.ingredients:
                 ing.prob = ing.weight / gameweight
-                cumulativeprob += ing.prob
-                ing.cprob = cumulativeprob
+                self.cumulativeprob += ing.prob
+                ing.cprob = self.cumulativeprob
         
     def __repr__(self):
-        return "Levels: %s \nTokens won: %u \nTotal drops: %u" % (self.levels, self.tokenswon, self.totaldrops)
+        return "Levels: %s \nTokens won: %u \nTotal drops: %u \nCumulative probability: %.2f" % (self.levels, self.tokenswon, self.totaldrops, self.cumulativeprob)
     
     def singleDrop(self):
         """code to get a single dropped ingredient
         """
-        rand = random()
+        rand = random.random()
         for level in self.levels:
             for ing in level.ingredients:
                 if rand <= ing.cprob:
@@ -41,15 +41,26 @@ class Game:
             drop ([Ingredient]): [a drop]
         """
         drop.Drop()
+        self.totaldrops += 1
         if drop.level.check():
             drop.level.mixing()
         
     def singleRound(self):
         """code to play an entire round until the last level is completed at least once
         """
-        while True:
-            
-            pass
+        while self.isComplete() == False:
+            d = self.singleDrop()
+            self.applyDrop(d)
+    
+    def reset(self):
+        self.tokenswon = 0
+        self.totaldrops = 0
+        for level in self.levels:
+            level.completions = 0
+            for ing in level.ingredients:
+                ing.quantity = 0
+    
+
             
         
     def isComplete(self):

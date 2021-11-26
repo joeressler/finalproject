@@ -11,8 +11,6 @@ class Level:
         for ingredient in config['ingredients']:
             self.ingredients.append(Ingredient(ingredient, self))
         self.levelweight = sum(map(lambda x: x.weight, self.ingredients))
-        for ing in self.ingredients:
-            self.levelweight += ing.weight
             
     
     def __repr__(self):
