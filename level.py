@@ -15,10 +15,9 @@ class Level:
         self.levelweight = 0
         self.game = game
         for ingredient in config['ingredients']:
-            self.ingredients.append(Ingredient(ingredient, self))
+            self.ingredients.append(Ingredient(ingredient, self)) # I love .append(). I love it so much. .append() is my favorite function.
         self.levelweight = sum(map(lambda x: x.weight, self.ingredients))
             
-    
     def __repr__(self):
         """[represent function]
 
@@ -46,6 +45,12 @@ class Level:
     def mixing(self):
         """[A function that completes the level and subtracts one from the ingredients in addition to adding the reward to total tokens won.]
         """
+        # A little note, I called this mixing because this whole
+        # program was created initially with the example of a
+        # 'potion' being created from 'ingredients' since that was
+        # one of the minigames that my father had worked on when he
+        # worked at a bingo/casino game company.
+        # So, this is mixing the ingredients together :)
         self.completions += 1
         self.game.tokenswon += self.reward
         for ing in self.ingredients:

@@ -23,6 +23,7 @@ class Overlord:
             [str]: [A representation of the Overlord object and its variables.]
         """
         s1 = "Overlord object with file input gameconfig and user input simconfig \nCurrent average drops is " + str(self.avgdrops) + "\nCurrent average tokens is " + str(self.avgtokens)
+        # Local variable goes brrrr
         return s1
     
     def runGame(self):
@@ -32,6 +33,7 @@ class Overlord:
             [Game]: [returns the result of a given game object after running through a full round.]
         """
         g1 = Game(self.config)
+        # Very inspired local variable, I know.
         g1.singleRound()
         return g1
     
@@ -44,13 +46,16 @@ class Overlord:
         """
         for n in range(self.simconfig["number_runs"]):
             #print("Running game iteration %u" % (n))
+            # This print line here is an artefact from testing :^)
             g1 = self.runGame()
             self.tokenlist.append(g1.tokenswon)
             self.dropslist.append(g1.totaldrops)
         print("Successfully ran %u times" % n)
         self.avgtokens = mean(self.tokenlist)
         self.avgdrops = mean(self.dropslist)
+        # Too lazy to not import mean() from statistics for this xD
         worstcase = self.avgdrops * 2
+        # Hey, I call it like it is.
         print("Average number of drops was %.2f" % self.avgdrops)
         print("Average number of tokens won was %.2f" % self.avgtokens)
         print("Maximum number of drops was %u" % max(self.dropslist))
