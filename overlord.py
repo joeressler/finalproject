@@ -17,15 +17,31 @@ class Overlord:
         self.avgdrops = None
     
     def __repr__(self):
+        """[represent function]
+
+        Returns:
+            [str]: [A representation of the Overlord object and its variables.]
+        """
         s1 = "Overlord object with file input gameconfig and user input simconfig \nCurrent average drops is " + str(self.avgdrops) + "\nCurrent average tokens is " + str(self.avgtokens)
         return s1
     
     def runGame(self):
+        """[Script to create and run a single game.]
+
+        Returns:
+            [Game]: [returns the result of a given game object after running through a full round.]
+        """
         g1 = Game(self.config)
         g1.singleRound()
         return g1
     
     def runSims(self):
+        """[creates and runs self.simconfig["number_runs"] games
+        and averages the drops and tokens won as well as the maximum
+        number of drops. It also looks at a given "worst case" scenario
+        of # of drops (2 * average) and tallies how many users of the
+        total had to experience this worst case.
+        """
         for n in range(self.simconfig["number_runs"]):
             #print("Running game iteration %u" % (n))
             g1 = self.runGame()

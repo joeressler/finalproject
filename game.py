@@ -23,6 +23,11 @@ class Game:
                 ing.cprob = self.cumulativeprob
         
     def __repr__(self):
+        """[represent function]
+
+        Returns:
+            [str]: [A representation of the Game object and its variables.]
+        """
         return "Levels: %s \nTokens won: %u \nTotal drops: %u \nCumulative probability: %.2f" % (self.levels, self.tokenswon, self.totaldrops, self.cumulativeprob)
     
     def singleDrop(self):
@@ -53,15 +58,14 @@ class Game:
             self.applyDrop(d)
     
     def reset(self):
+        """[code to reset the Game object after a game is completed.]
+        """
         self.tokenswon = 0
         self.totaldrops = 0
         for level in self.levels:
             level.completions = 0
             for ing in level.ingredients:
-                ing.quantity = 0
-    
-
-            
+                ing.quantity = 0   
         
     def isComplete(self):
         """if all of the levels have been completed at least once then returns True

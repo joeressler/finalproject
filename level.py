@@ -2,6 +2,12 @@ from ingredient import *
 
 class Level:
     def __init__(self, config, game):
+        """[creates a Level object that represents a completable level that requires certain ingredients.]
+
+        Args:
+            config ([dict]): [dictionary describing the attributes and Ingredients of a level.]
+            game ([Game]): [the parent game of this Level.]
+        """
         self.level = config['level']
         self.reward = config['reward']
         self.ingredients = []
@@ -14,6 +20,11 @@ class Level:
             
     
     def __repr__(self):
+        """[represent function]
+
+        Returns:
+            [str]: [A representation of the Level object and its variables/Ingredients.]
+        """
         return "\nLevel: %s \nReward: %s \nIngredients: %s \nTimes completed: %u\n" % (self.level, self.reward, self.ingredients, self.completions)
     
     def isFinished(self):
