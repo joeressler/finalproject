@@ -24,8 +24,8 @@ def main():
     # config filename: 
     # config_2c311168-4d95-11ec-b5cc-a4bb6d6e7ab9.json
     #
-    config1 = config_creator(str(input("Config filename: (include file extension)")))
+    configvar = str(input("Config filename: (include file extension)"))
+    config1 = config_creator(configvar)
+    print('Running %s' % configvar)
     o1 = Overlord(config1, simconfig)
     o1.runSims()
-    print()
-    print(o1)
