@@ -1,7 +1,6 @@
 import json
 from game import *
 from overlord import *
-__name__ == '__main__'
 
 def config_creator(filename):
     """[summary]
@@ -29,3 +28,6 @@ def main():
     print('Running %s' % configvar)
     o1 = Overlord(config1, simconfig)
     o1.runSims()
+
+if __name__ == '__main__':
+    main()
