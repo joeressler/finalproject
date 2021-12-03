@@ -1,5 +1,0 @@
-ingredient1 - 1 - 1/9 - 1/9
-ingredient2 - 1 - 1/9 - 2/9
-ingredient3 - 2 - 2/9 - 4/9
-ingredient4 - 2 - 2/9 - 6/9
-ingredient5 - 3 - 3/9 - 9/9
