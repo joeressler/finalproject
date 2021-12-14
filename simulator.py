@@ -29,5 +29,12 @@ def main():
     o1 = Overlord(config1, simconfig)
     o1.runSims()
 
+def guiFunction(config1, simconfig):
+    configvar = config1
+    config2 = config_creator(configvar)
+    print('Running %s' % configvar)
+    o1 = Overlord(config2, simconfig)
+    o1.runSims()
+
 if __name__ == '__main__':
     main()
